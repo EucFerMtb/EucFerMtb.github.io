@@ -138,7 +138,7 @@
 /* Profileの装飾
 ======================================================================================== */
     #Profile{
-        background-image: url(../MyHomePage/images/profile-top.jpg);
+        background-image: url(https://github.com/EucFerMtb/EucFerMtb.github.io/blob/main/profile-top.jpg?raw=true);
         height: 270px;
         margin-bottom: 40px;
     }
