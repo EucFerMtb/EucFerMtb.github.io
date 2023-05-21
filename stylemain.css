@@ -125,7 +125,7 @@
 
 
 /* メインページの背景画面 */
-    #main{
+    #index{
         background-image: url(homemain.jpg);
         min-height: 100vh;
     }
