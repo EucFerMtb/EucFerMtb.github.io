@@ -1,0 +1,107 @@
+<!--ブログの頁-->
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <title>ブログページ</title>
+        <meta name="description" content="ブログのページ">
+        <link rel="stylesheet" href="stylemain.css">
+        <!--CSS-->
+        <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@700&family=Philosopher:ital@0;1&display=swap" rel="stylesheet">
+        <link href="css/stylemain.css" rel="stylesheet">
+    </head>
+
+    <body>
+        <div id="brog" class="big-bg">
+            <!--ページの上部を作成する-->
+            <header class="home-header wrapper">
+                <!--ナビゲーションメニュー(メニューバーの作成)-->
+                <nav>
+                    <ul class="main-nav">
+                        <li><a href="main.html">Home</a></li>
+                        <li><a href="profile.html">Profile</a></li>
+                        <li><a href="brog.html">Brog</a></li>
+                    </ul>
+                </nav>
+            </header>
+
+            <!-- 見出し -->
+            <div class="wrapper">
+                <h2 class="page-title brog-color">Brog</h2>
+            </div>
+        </div>
+
+        <!-- brog content -->
+        <div class="brog-content wrapper">
+            <article>
+                <header class="brog-info">
+                    <h2 class="post-title">Brogを書いています</h2>
+                </header>
+                <img src="images/wall.png" alt="画像が表示ざれません">
+
+                <p>
+                    隣のサイドバーのリンクから色々メモがてらに書いています(記事は私個人の見解も含まれるのでご了承ください)。
+                    サイドバーのHTMLの勉強用は100%自分用なので見ないでください。本HPは, 色々アップデートも考えています。
+                    また、完全に趣味で作っています。ごめんなさい。浅はかな知識でなんとか頑張ってますので寛大な心で見守ってください。
+                    ちなみに、上記のタイトル「BROG」の背景は、ソウル市街の夜景の写真です。<br>
+                    <h4>日付が変わるまで残り<span id="timer"></span>です。本日もお疲れ様です!</h4>
+                </p>
+            </article>
+
+            <aside>
+                <h3 class="brog-info">カテゴリー</h3>
+                <ul class="sub-brog">
+                    <li><a href="HTML.html">HTMLの勉強用</a></li>
+                </ul>
+            </aside>
+        </div>
+        
+        
+        <!-- フッターの作成 -->
+        <footer>
+            <div class="wrapper">
+                <p><small>&copy; 2023 Blue-Mountain</small></p>
+            </div>
+        </footer>
+
+        
+        <script>
+            'use strict';
+            function countdown(due){
+                const now = new Date();
+        
+                const rest = due.getTime() - now.getTime();
+                const sec = Math.floor(rest/1000)%60;
+                const min = Math.floor(rest/1000/60)%60;
+                const hours = Math.floor(rest/1000/60/60)%24;
+                const days = Math.floor(rest/1000/60/60/24);
+                const count = [days,hours,min,sec];
+        
+                return count;
+            }
+        
+            let goal = new Date();
+            goal.setHours(23);
+            goal.setMinutes(59);
+            goal.setSeconds(59);
+        
+            // console.log(countdown(goal));
+            function recalc(){
+                const counter = countdown(goal);
+                const time = `${counter[1]}時間${counter[2]}分${counter[3]}秒`;
+                document.getElementById('timer').textContent = time;
+                refresh();
+            }
+            
+            function refresh(){
+                setTimeout(recalc,1000);
+            }
+        
+            recalc();
+        </script>
+    </body>
+
+    
+
+</html>
