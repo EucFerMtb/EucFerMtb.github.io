@@ -126,7 +126,7 @@
 
 /* メインページの背景画面 */
     #index{
-        background-image: url(images/homemain.jpg);
+        background-image: url(https://github.com/EucFerMtb/EucFerMtb.github.io/blob/main/images/homemain.jpg?raw=true);
         min-height: 100vh;
     }
     
