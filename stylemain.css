@@ -270,3 +270,64 @@
         display: flex;
     }
 
+
+/* Informationの装飾 */
+/* ============================================================================================ */
+    #information{
+        background-image: url(https://github.com/EucFerMtb/EucFerMtb.github.io/blob/main/informaition-bg.jpg?raw=true);
+        height: 270px;
+        margin: 0;
+    }
+
+    .info-form{
+        text-align: center;
+    }
+
+    /* 「地図」の装飾 */
+    #location{
+        padding: 4% 0;
+    }
+    #location .wrapper{
+        display: flex;
+        justify-content: space-between;
+    }
+    .location-map{
+        width: 74%;
+    }
+    iframe{
+        width: 90%;
+    }
+
+    /* 「地図」の紹介の文章 */
+    .location-info{
+        width: 22%;
+    }
+    .location-info p{
+        padding: 12px 10px;
+    }
+    
+    /* SNS関連の装飾 */
+    #sns{
+        background: #FaF7F0;
+        padding: 4% 0;
+    }
+    #sns .wrapper{
+        display: flex;
+        justify-content: space-between;
+    }
+    #sns .sub-title{
+        margin-bottom: 30px;
+    }
+    .sns-box{
+        width: 30%; 
+    }
+    .info-form a:hover{
+        color: red;
+    }
+    .location-info a:hover{
+        color: red;
+    }
+    .sns-box a:hover{
+        color: red;
+    }
+
